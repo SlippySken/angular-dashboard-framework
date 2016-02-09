@@ -57,6 +57,12 @@ angular.module('adf')
             definition.wid = dashboard.id();
           }
 
+		  if(w.editable === undefined){
+			definition.editable = true;
+		  } else {
+			definition.editable = w.editable;
+		  }
+
           // pass copy of widget to scope
           $scope.widget = angular.copy(w);
 
