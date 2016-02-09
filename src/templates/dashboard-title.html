@@ -1,16 +1,40 @@
 <h1>
   {{model.title}}
   <span style="font-size: 16px" class="pull-right">
-    <a href="" ng-if="editMode" title="add new widget" ng-click="addWidgetDialog()">
+    <a  href="" 
+        ng-if="editMode" 
+        title="{{model.translations === undefined ? 'add new widget' : null}}" 
+        uib-tooltip="{{model.translations === undefined ? null : model.translations.addWidgetTooltip}}" 
+        tooltip-append-to-body="true" 
+        tooltip-placement="left"
+        ng-click="addWidgetDialog()">
       <i class="glyphicon glyphicon-plus-sign"></i>
     </a>
-    <a href="" ng-if="editMode" title="edit dashboard" ng-click="editDashboardDialog()">
+    <a  href="" 
+        ng-if="editMode" 
+        title="{{model.translations === undefined ? 'edit dashboard' : null}}" 
+        uib-tooltip="{{model.translations === undefined ? null : model.translations.editDashboardTooltip}}" 
+        tooltip-append-to-body="true" 
+        tooltip-placement="left"
+        ng-click="editDashboardDialog()">
       <i class="glyphicon glyphicon-cog"></i>
     </a>
-    <a href="" ng-if="options.editable" title="{{editMode ? 'save changes' : 'enable edit mode'}}" ng-click="toggleEditMode()">
+    <a  href="" 
+        ng-if="options.editable" 
+        title="{{model.translations === undefined ? (editMode ? 'save changes' : 'enable edit mode') : null}}" 
+        uib-tooltip="{{model.translations === undefined ? null : (editMode ? model.translations.disableEditModeTooltip : model.translations.enableEditModeTooltip)}}" 
+        tooltip-append-to-body="true" 
+        tooltip-placement="left"
+        ng-click="toggleEditMode()">
       <i class="glyphicon" x-ng-class="{'glyphicon-edit' : !editMode, 'glyphicon-save' : editMode}"></i>
     </a>
-    <a href="" ng-if="editMode" title="undo changes" ng-click="cancelEditMode()">
+    <a  href="" 
+        ng-if="editMode" 
+        title="{{model.translations === undefined ? 'undo changes' : null}}" 
+        uib-tooltip="{{model.translations === undefined ? null : model.translations.undoChangesTooltip}}"
+        tooltip-append-to-body="true" 
+        tooltip-placement="left"
+        ng-click="cancelEditMode()">
       <i class="glyphicon glyphicon-repeat adf-flip"></i>
     </a>
   </span>
