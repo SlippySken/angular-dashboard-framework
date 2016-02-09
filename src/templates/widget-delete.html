@@ -1,14 +1,14 @@
 <div class="modal-header">
-  <h4 class="modal-title">Delete {{widget.title}}</h4>
+  <h4 class="modal-title">{{'adfDashboard.deleteWidget' | translate}} {{widget.title}}</h4>
 </div>
 <div class="modal-body">
   <form role="form">
     <div class="form-group">
-      <label for="widgetTitle">Are you sure you want to delete this widget ?</label>
+      <label for="widgetTitle">{{'adfDashboard.deleteQuestion' | translate}}'</label>
     </div>
   </form>
 </div>
 <div class="modal-footer">
-  <button type="button" class="btn btn-default" ng-click="closeDialog()">Close</button>
-  <button type="button" class="btn btn-primary" ng-click="deleteDialog()">Delete</button>
+  <button type="button" class="btn btn-default" ng-click="closeDialog()">{{'adfDashboard.close' | translate}}</button>
+  <button type="button" class="btn btn-primary" ng-click="deleteDialog()">{{'adfDashboard.delete' | translate}}</button>
 </div>

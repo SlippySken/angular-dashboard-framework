@@ -3,8 +3,7 @@
   <span style="font-size: 16px" class="pull-right">
     <a  href="" 
         ng-if="editMode" 
-        title="{{model.translations === undefined ? 'add new widget' : null}}" 
-        uib-tooltip="{{model.translations === undefined ? null : model.translations.addWidgetTooltip}}" 
+        uib-tooltip="{{'adfDashboard.addWidget' | translate}}" 
         tooltip-append-to-body="true" 
         tooltip-placement="left"
         ng-click="addWidgetDialog()">
@@ -12,8 +11,7 @@
     </a>
     <a  href="" 
         ng-if="editMode" 
-        title="{{model.translations === undefined ? 'edit dashboard' : null}}" 
-        uib-tooltip="{{model.translations === undefined ? null : model.translations.editDashboardTooltip}}" 
+        uib-tooltip="{{'adfDashboard.editDashboard' | translate}}" 
         tooltip-append-to-body="true" 
         tooltip-placement="left"
         ng-click="editDashboardDialog()">
@@ -21,8 +19,7 @@
     </a>
     <a  href="" 
         ng-if="options.editable" 
-        title="{{model.translations === undefined ? (editMode ? 'save changes' : 'enable edit mode') : null}}" 
-        uib-tooltip="{{model.translations === undefined ? null : (editMode ? model.translations.disableEditModeTooltip : model.translations.enableEditModeTooltip)}}" 
+        uib-tooltip="{{(editMode ? 'adfDashboard.disableEditMode' : 'adfDashboard.enableEditMode') | translate}}" 
         tooltip-append-to-body="true" 
         tooltip-placement="left"
         ng-click="toggleEditMode()">
@@ -30,8 +27,7 @@
     </a>
     <a  href="" 
         ng-if="editMode" 
-        title="{{model.translations === undefined ? 'undo changes' : null}}" 
-        uib-tooltip="{{model.translations === undefined ? null : model.translations.undoChangesTooltip}}"
+        uib-tooltip="{{'adfDashboard.undoChanges' | translate}}"
         tooltip-append-to-body="true" 
         tooltip-placement="left"
         ng-click="cancelEditMode()">
