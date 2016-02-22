@@ -107,7 +107,7 @@ angular.module('adf')
             }
           }
           $element.remove();
-          $rootScope.$broadcast('adfWidgetRemovedFromColumn');
+          $rootScope.$broadcast('adfWidgetRemovedFromColumn', definition);
         };
 
         $scope.remove = function() {
