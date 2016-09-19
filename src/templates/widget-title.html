@@ -9,6 +9,14 @@
         ng-click="reload()">
       <i class="glyphicon glyphicon-refresh"></i>
     </a>
+    <a  href="" 
+        uib-tooltip="{{'adfDashboard.infoWidget' | translate}}" 
+        tooltip-append-to-body="true" 
+        tooltip-placement="left"
+        ng-if="definition.showInfo" 
+        ng-click="definition.info()">
+      <i class="glyphicon glyphicon-info-sign"></i>
+    </a>
     <!-- change widget location -->
     <a  href="" 
         uib-tooltip="{{'adfDashboard.changeWidgetLocation' | translate}}" 

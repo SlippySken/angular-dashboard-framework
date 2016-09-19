@@ -57,11 +57,21 @@ angular.module('adf')
             definition.wid = dashboard.id();
           }
 
-		  if(w.editable === undefined){
-			definition.editable = true;
-		  } else {
-			definition.editable = w.editable;
-		  }
+          if(w.editable === undefined){
+          definition.editable = true;
+          } else {
+          definition.editable = w.editable;
+          }
+
+          //check for isFunction http://stackoverflow.com/questions/5999998/how-can-i-check-if-a-javascript-variable-is-function-type
+          var getType = {};
+          if(w.info !== undefined && w.info && getType.toString.call(w.info) === '[object Function]'){
+            definition.showInfo = true;
+            definition.info = w.info;
+          } else {
+            definition.showInfo = false;
+          }
+
 
           // pass copy of widget to scope
           $scope.widget = angular.copy(w);
