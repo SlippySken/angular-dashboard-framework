@@ -370,7 +370,8 @@ angular.module('adf')
           var opts = {
             scope: addScope,
             templateUrl: adfAddTemplatePath,
-            backdrop: 'static'
+            backdrop: 'static',
+			size: 'lg'
           };
 
           var instance = $uibModal.open(opts);
