@@ -81,3 +81,14 @@ pre.edit {
 .dashboard-modal.widget-fullscreen .modal-dialog {
  width: 98%;
 }
+
+.adf input[type="radio"] {
+    display: none;
+}
+.adf input[type="radio"]:checked + label {
+    //border: 1px solid red;
+    opacity: 1;
+}
+.adf input[type="radio"] + label {
+    opacity: 0.4;
+}
